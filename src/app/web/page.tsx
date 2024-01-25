@@ -10,7 +10,8 @@ const Web = () => {
 
   
   return (
-    <main className="min-h-screen">
+    <main className="">
+       <div className="h-[9.62vh]"></div>
       <div className=" mx-[12.5vw] grid grid-cols-6 gap-x-[1.04vw] gap-y-[1.85vh]">
         <h1 className="col-span-6 text-[5.18vh] leading-[5.55vh] py-[1.85vh]">
           ВЕБ ПРОЕКТЫ
