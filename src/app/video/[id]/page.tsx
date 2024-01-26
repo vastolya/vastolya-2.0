@@ -7,8 +7,8 @@ import Image from "next/image";
 import { montserrat } from "@/app/font";
 import ModalVideo from "@/app/components/ModalVideo";
 
-const VideoId = ({ params }: any) => {
 
+const VideoId = ({ params }: any) => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [isModal, setIsModal] = useState(false);
   useEffect(() => {
@@ -35,52 +35,64 @@ const VideoId = ({ params }: any) => {
   const data = videoData.filter((item: { id: any }) => item.id == params.id);
 
   return (
-    <div className="">
-      {isModal && selectedVideo && <ModalVideo video={selectedVideo} onClose={closeModal} />}
+    <div className="min-h-[91vh]">
+      {isModal && selectedVideo && (
+        <ModalVideo video={selectedVideo} onClose={closeModal} />
+      )}
       <div className="h-[9.62vh]"></div>
       {data.map((item, index) => (
         <div
           key={index}
-          className="mx-[12.5vw] grid grid-cols-6 gap-x-[1.04vw] gap-y-[3.70vh] "
+          className="mx-[12.5vw] my-[2.22vh] grid grid-cols-6 gap-x-[1.04vw] gap-y-[1.85vh] "
         >
-          <div className="col-span-6">
-            <h1 className="pb-[1.85vh] text-[5.18vh] leading-[7.77vh]">
+          <div className="col-span-2">
+            <h1 className=" pb-[1.85vh] text-[5.18vh] leading-[5.18vh]">
               {item.title.toUpperCase()}
             </h1>
             <p
-              className={`text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
+              className={` text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
             >
               {item.description}
             </p>
           </div>
-          <div className="col-span-6 flex flex-col gap-[3.70vh] ">
-            {item.content.map((video, index: number) => (
+          {/* <div className="col-span-2"></div> */}
+
+          {item.content.map((video, index: number) => (
+            <div
+              key={index}
+              className="col-span-2 transition-transform transform duration-200"
+            >
               <div
-                key={index}
-                className="grid grid-cols-6 gap-x-[1.04vw] gap-y-[1.85vh] hover:scale-[102%] transition-transform transform duration-200"
+                onClick={(e) => {
+                  handleVideoClick(video.youtubeId);
+                  setIsModal(!isModal);
+                }}
+                className="group col-span-2 h-full min-h-[33vh] bg-black relative rounded-lg overflow-hidden cursor-pointer "
               >
-                <div
-                  onClick={(e) => {
-                    handleVideoClick(video.youtubeId);
-                    setIsModal(!isModal)
-                  }}
-                  className="col-span-2 h-[24.44vh] bg-gray-100 relative rounded-lg overflow-hidden cursor-pointer "
-                >
-                  <Image src={video.cover} alt={``} fill sizes="100" className="object-cover " />
+                <div className="">
+                  <Image
+                    src={video.cover}
+                    alt={``}
+                    fill
+                    sizes="100"
+                    className="object-cover  opacity-100 group-hover:opacity-20 transition-all duration-300 group-hover:scale-[103%] ease-in-out"
+                  />
                 </div>
-                <div className=" col-span-4 flex flex-col justify-center gap-y-[1.85vh]">
-                  <h1 className="text-[2.22vh] leading-[3.33vh]">
-                    {video.title}
-                  </h1>
-                  <p
-                    className={`text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
-                  >
-                    {video.description}
-                  </p>
+                <div className="text-white flex flex-col justify-start gap-y-[0.74vh] absolute opacity-0 group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                  <div className="px-[1.25vw] py-[2.22vh] flex flex-col gap-[1.85vh]">
+                    <h1 className="text-[2.22vh] leading-[2.22vh]">
+                      {video.title.toUpperCase()}
+                    </h1>
+                    <p
+                      className={`text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
+                    >
+                      {video.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       ))}
     </div>

@@ -18,12 +18,21 @@ import PicLecturesAi from "../../public/pics/lectures_ai.jpg";
 import PicEvents777 from "../../public/pics/events_777.jpg";
 import PicEventsNigth from "../../public/pics/events_nigth.jpg";
 import PicEventsNoize from "../../public/pics/events_noize.jpg";
-
-
+import PicAzCover from "../../public/pics/az_cover.jpg";
+import PicAnthropolandCover from "../../public/pics/anthropoland_cover.jpg";
+import PicEcoCover from "../../public/pics/eco_cover.jpg";
+import PicAiCover from "../../public/pics/aiCover.jpg";
+import PicEventsCover from "../../public/pics/events_cover.jpg";
+import PicFixifootCover from "../../public/pics/fixifoot_cover.jpg";
+import PicBambooCover from "../../public/pics/bamboo_cover.jpg";
+import PicDrusbaCover from "../../public/pics/drusba_cover.jpg";
+import PicDrakepoCover from "../../public/pics/drapeko_cover.jpg";
+import PicVastolyaCover from "../../public/pics/vastolya_cover.jpg";
 
 export const videoData = [
   {
     id: "artzakladky",
+    cover: PicAzCover,
     title: "Арт Закладки",
     subtitle: "Серия документальных фильмов",
     description:
@@ -75,6 +84,7 @@ export const videoData = [
   },
   {
     id: "anthropoland",
+    cover: PicAnthropolandCover,
     title: "Антрополэнд",
     subtitle: "Масштабный выставочный проект",
     description:
@@ -105,15 +115,16 @@ export const videoData = [
   },
   {
     id: "ecosphere",
+    cover: PicEcoCover,
     title: "Экосфера",
     subtitle: "Экологическое СМИ",
     description:
       "Проект «Экосфера» исследует проблемы экологии через многогранность форматов, включая тексты, видео и подкасты. Вмещая новости, экспертное мнение и интервью с ключевыми фигурами власти и бизнеса, предлагает практические советы для экологически устойчивого образа жизни. Ключевым моментом является мобилизация и поддержка экологических инициатив с акцентом на научную верификацию публикуемых материалов.",
     content: [
       {
-        title: "Что нужно знать о реальной цене цветов. Углеродный след букета",
+        title: "Что нужно знать о цене цветов? Углеродный след букета",
         description:
-          "«В этом выпуске рассказываем, какой ущерб природе наносит букет цветов. Из чего составляется углеродный след и как его сократить.",
+          "В этом выпуске рассказываем, какой ущерб природе наносит букет цветов. Из чего составляется углеродный след и как его сократить.",
         youtubeId: "FkdZEweKNcI",
         cover: PicEcoFlower,
       },
@@ -132,7 +143,7 @@ export const videoData = [
         cover: PicEcoTrash,
       },
       {
-        title: "Александр Лебедев о честности в стратегиях «зеленого» бизнеса",
+        title: "Александр Лебедев о стратегиях «зеленого» бизнеса",
         description:
           "Поговорили с Александром Лебедевым, академическим руководителем магистратуры «Менеджмент в ритейле» Высшей школы бизнеса Высшей Школы Экономики о гринвошинге, новых стратегиях бизнеса и экологичном образе жизни.",
         youtubeId: "fxfR2zWQ0J4",
@@ -142,6 +153,7 @@ export const videoData = [
   },
   {
     id: "videoart",
+    cover: PicArtFreedom,
     title: "Видеоарт",
     subtitle: "Авторские работы",
     description:
@@ -156,7 +168,7 @@ export const videoData = [
       {
         title: "Багаж, 2021",
         description:
-          "Книга — дневник погибшей слишком рано девушки. Приняв дневник, взяв за него ответственность, делая в нем записи, я продолжил прервавшийся диалог, чтобы найти в себе силы пережить эти события. Спустя 4 года, 6 авиаперелётов и 27 000 километров, я больше не в ответе за дневник. Мой чемодан свободен от багажа.",
+          "Книга — дневник погибшей слишком рано девушки. Приняв дневник, взяв за него ответственность, делая в нем записи, я продолжил прервавшийся диалог, чтобы найти в себе силы пережить эти события. Спустя 4 года, 6 авиаперелётов и 27 000 километров, дневник — больше не часть багажа.",
         youtubeId: "nf3AsRwhbFM",
         cover: PicArtBaggage,
       },
@@ -164,15 +176,14 @@ export const videoData = [
   },
   {
     id: "events",
+    cover: PicEventsCover,
     title: "События",
     subtitle: "Репортажная и постановочная съёмка",
     description: "Тизеры, бэкстейджи и отчетные видео с прошедших событий.",
     content: [
-
       {
         title: "Персональная выставка Валерии Тыняной — «777»",
-        description:
-          "Тизер к выставке «777»",
+        description: "Тизер к выставке «777»",
         youtubeId: "1Lv7qmDn6ac",
         cover: PicEvents777,
       },
@@ -194,6 +205,7 @@ export const videoData = [
   },
   {
     id: "ai",
+    cover: PicAiCover,
     title: "Stable Diffusion",
     subtitle: "Нейрогенерации",
     description:
@@ -206,14 +218,6 @@ export const videoData = [
         youtubeId: "OzAqraffMJ0",
         cover: PicAiMy,
       },
-    ],
-  },
-  {
-    id: "lectures",
-    title: "Обучение",
-    subtitle: "Лекции и уроки",
-    description: "Собранные в одном месте авторские образовательные материалы.",
-    content: [
       {
         title: "Анатолий Васильев — Очередная лекция про нейросети",
         description:
@@ -227,34 +231,79 @@ export const videoData = [
 
 export const webData = [
   {
-    type: "web",
+    id: "fixifoot",
+    cover: PicFixifootCover,
     title: "fixifoot.com",
     subtitle: "Карбоновые стельки на заказ",
-    description: "-",
-    content: {},
+    description: "Возглавлял работу команды из трех человек. Использовал TypeScript, Next.js и Tailwind для разработки адаптивного дизайна веб и мобильной версии. Интегрировал панель управления контентом Shopify API. Провел SEO-оптимизацию для улучшения видимости в поисковых системах. Настроил взаимодействие с внешними сервисами, такими как Google Maps API и Nodemailer, с применением Node.js.",
+    content: [
+      {
+        title: "fixifoot.com",
+        description: "Карбоновые стельки на заказ",
+        youtubeId: "https://www.fixifoot.com/",
+        cover: PicFixifootCover,
+      },
+    ],
   },
   {
-    title: "BAMBOOSTORY.COM",
+    id: "bamboostory",
+    cover: PicBambooCover,
+    title: "bamboostory.com",
     subtitle: "Фотографии на деревянных сувенирах",
-    description: "-",
-    content: {},
+    description:
+      "Занимаюсь веб-разработкой во взаимодействии с веб-дизайнером. Разработал фронтенд и бэкенд, используя Next.js, TypeScript и Tailwind, обеспечил адаптивность сайта для мобильных устройств. Настроил взаимодействие с внешним сервисом Resend, применяя Node.js. Провел SEO-оптимизацию для улучшения видимости проекта в поисковых системах. В настоящее время занимаюсь внедрением платежной системы, дополняю проект функциональностью.",
+    content: [
+      {
+        title: "bamboostory.com",
+        description: "Фотографии на деревянных сувенирах",
+        youtubeId: "https://bamboo-story.vercel.app/",
+        cover: PicBambooCover,
+      },
+    ],
   },
   {
-    title: "DRUSBA.ART",
+    id: "drusba",
+    cover: PicDrusbaCover,
+    title: "drusba.art",
     subtitle: "Служба доставки абсурда",
-    description: "-",
-    content: {},
+    description: "Реализовал навигацию между страницами без перезагрузки с использованием Next.js. Разработал адаптивный веб-сайт для мобильных устройств. Интегрировал панель управления контентом сайта Shopify API. Провел SEO-оптимизацию для повышения видимости в поисковых системах и настроил взаимодействие с внешним сервисом Nodemailer с использованием Node.js.",
+    content: [
+      {
+        title: "drusba.art",
+        description: "Служба доставки абсурда",
+        youtubeId: "https://www.drusba.art/",
+        cover: PicDrusbaCover,
+      },
+    ],
   },
   {
-    title: "OLGADRAPEKO.RU",
+    id: "drapeko",
+    cover: PicDrakepoCover,
+    title: "olgadrapeko.ru",
     subtitle: "Юрист для бизнеса и частных лиц",
-    description: "-",
-    content: {},
+    description: "Реализовал навигацию между страницами без перезагрузки с использованием Next.js. Разработал адаптивный веб-сайт для мобильных устройств. Разработал фронтенд и бэкенд, используя Next.js, TypeScript и Tailwind, обеспечил адаптивность сайта для мобильных устройств. Настроил взаимодействие с внешним сервисом Resend, применяя Node.js. Провел SEO-оптимизацию для улучшения видимости проекта в поисковых системах. ",
+    content: [
+      {
+        title: "olgadrapeko.ru",
+        description: "Юрист для бизнеса и частных лиц",
+        youtubeId: "https://www.olgadrapeko.ru/",
+        cover: PicDrakepoCover,
+      },
+    ],
   },
   {
-    title: "VASTOLYA.ART",
+    id: "vastolya",
+    cover: PicVastolyaCover,
+    title: "vastolya.art",
     subtitle: "Вы сейчас тут",
-    description: "-",
-    content: {},
+    description: "Реализовал навигацию между страницами без перезагрузки с использованием Next.js. Разработал адаптивный веб-сайт для мобильных устройств.",
+    content: [
+      {
+        title: "vastolya.art",
+        description: "Вы сейчас тут",
+        youtubeId: "https://www.vastolya.art/",
+        cover: PicVastolyaCover,
+      },
+    ],
   },
 ];

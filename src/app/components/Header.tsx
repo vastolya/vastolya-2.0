@@ -35,20 +35,20 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white w-full fixed transition-transform transform  z-[101] ${
+      className={`bg-gray-100 w-full fixed transition-transform transform  z-[101] ${
         (scrolling && !isClick) || isClick
           ? "translate-y-0"
           : "-translate-y-full"
       }`}
     >
       <div
-        className={`mx-[12.5vw] my-[3.70vh] flex justify-between text-xl leading-6 `}
+        className={`mx-[12.5vw] my-[3.70vh] flex justify-between text-[1.85vh] leading-[2.22vh] `}
       >
         <Link href="/">
           <h1>VASTOLYA.ART</h1>
         </Link>
 
-        <div className="flex gap-10 ">
+        <div className="flex gap-[2.08vw] ">
           <p>RU - EN</p>
           <Link href="/web">
             <p>ВЕБ ПРОЕКТЫ</p>
