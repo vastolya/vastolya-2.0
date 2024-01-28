@@ -7,8 +7,11 @@ import Image from "next/image";
 import { montserrat } from "@/app/font";
 import ModalVideo from "@/app/components/ModalVideo";
 
-
 const VideoId = ({ params }: any) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [isModal, setIsModal] = useState(false);
   useEffect(() => {
@@ -67,12 +70,14 @@ const VideoId = ({ params }: any) => {
                   handleVideoClick(video.youtubeId);
                   setIsModal(!isModal);
                 }}
-                className="group col-span-2 h-full min-h-[33vh] bg-black relative rounded-lg overflow-hidden cursor-pointer "
+                className={`group col-span-2 h-full min-h-[33vh] ${ imageLoaded ? "bg-black" : "bg-none"} relative rounded-lg overflow-hidden cursor-pointer`}
               >
                 <div className="">
                   <Image
+                    onLoad={handleImageLoad}
                     src={video.cover}
                     alt={``}
+                    priority
                     fill
                     sizes="100"
                     className="object-cover  opacity-100 group-hover:opacity-20 transition-all duration-300 group-hover:scale-[103%] ease-in-out"

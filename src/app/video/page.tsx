@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import { videoData } from "../../api/db";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,6 +7,13 @@ import Image from "next/image";
 const video = videoData;
 
 const Video = () => {
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+  
   return (
     <main className="min-h-[91vh]">
       <div className="h-[9.62vh] "></div>
@@ -19,10 +27,12 @@ const Video = () => {
             className="col-span-2 transition-all duration-300 group"
             key={index}
           >
-            <div className="relative h-[24.35vh] w-[24.32vw] bg-black  flex justify-end items-end text-end rounded-lg overflow-hidden shadow-lg">
+            <div className={`relative h-[24.35vh] w-[24.32vw] ${ imageLoaded ? "bg-black" : "bg-none"} flex justify-end items-end text-end rounded-lg overflow-hidden shadow-lg`}>
               <Image
+                 onLoad={handleImageLoad}
                 src={item.cover}
                 alt={``}
+                priority
                 fill
                 sizes="100"
                 className="object-cover opacity-100 group-hover:opacity-25 transition-all duration-300 hover:scale-[103%] ease-in-out"

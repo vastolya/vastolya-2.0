@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,10 +8,15 @@ import ModalVideo from "@/app/components/ModalVideo";
 import IconPlay from "../../../../public/icons/icon_play.svg";
 import { webData } from "@/api/db";
 
-const web = webData
+const web = webData;
 
 const Web = () => {
- 
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <main className="min-h-[91vh] ">
       <div className="h-[9.62vh] "></div>
@@ -21,16 +26,18 @@ const Web = () => {
         </h1>
         {web.map((item, index) => (
           <Link
-            href={`web/${item.id}`}
+            href={`${item.type}/${item.id}`}
             className="col-span-2 "
             key={index}
           >
-            <div className="group relative group min-h-[24.35vh] bg-black flex justify-end items-end text-end rounded-lg overflow-hidden shadow-lg ">
+            <div className={`group relative group min-h-[24.35vh] ${ imageLoaded ? "bg-black" : "bg-none"} flex justify-end items-end text-end rounded-lg overflow-hidden shadow-lg`}>
               <Image
+                onLoad={handleImageLoad}
                 src={item.cover}
+                priority
                 alt={``}
                 fill
-                sizes="100"
+                sizes="10%"
                 className="object-cover opacity-100 group-hover:opacity-25 transition-all duration-200 scale-[101%] group-hover:scale-[103%] ease-in-out"
               />
               <div className="absolute bottom-[1.85vh] right-[1.04vw]">

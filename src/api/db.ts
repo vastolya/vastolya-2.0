@@ -28,10 +28,16 @@ import PicBambooCover from "../../public/pics/bamboo_cover.jpg";
 import PicDrusbaCover from "../../public/pics/drusba_cover.jpg";
 import PicDrakepoCover from "../../public/pics/drapeko_cover.jpg";
 import PicVastolyaCover from "../../public/pics/vastolya_cover.jpg";
+import PicFixifootBigCover from "../../public/pics/fixifoot_cover_big.jpg";
+import PicBambooBigCover from "../../public/pics/bamboo_cover_big.jpg";
+import PicDrusbaBigCover from "../../public/pics/drusba_cover_big.jpg";
+import PicDrakepoBigCover from "../../public/pics/drapeko_cover_big.jpg";
 
 export const videoData = [
   {
     id: "artzakladky",
+    type: "video",
+    videoCover: 'videos/zakladky_video.webm',
     cover: PicAzCover,
     title: "Арт Закладки",
     subtitle: "Серия документальных фильмов",
@@ -84,6 +90,8 @@ export const videoData = [
   },
   {
     id: "anthropoland",
+    type: "video",
+    videoCover: 'videos/anthropoland_video.webm',
     cover: PicAnthropolandCover,
     title: "Антрополэнд",
     subtitle: "Масштабный выставочный проект",
@@ -115,6 +123,8 @@ export const videoData = [
   },
   {
     id: "ecosphere",
+    type: "video",
+    videoCover: 'videos/ecosphere_video.webm',
     cover: PicEcoCover,
     title: "Экосфера",
     subtitle: "Экологическое СМИ",
@@ -153,6 +163,8 @@ export const videoData = [
   },
   {
     id: "videoart",
+    type: "video",
+    videoCover: 'videos/art_video.webm',
     cover: PicArtFreedom,
     title: "Видеоарт",
     subtitle: "Авторские работы",
@@ -176,6 +188,8 @@ export const videoData = [
   },
   {
     id: "events",
+    type: "video",
+    videoCover: 'videos/events_video.webm',
     cover: PicEventsCover,
     title: "События",
     subtitle: "Репортажная и постановочная съёмка",
@@ -205,6 +219,8 @@ export const videoData = [
   },
   {
     id: "ai",
+    type: "video",
+    videoCover: 'videos/ai_video.webm',
     cover: PicAiCover,
     title: "Stable Diffusion",
     subtitle: "Нейрогенерации",
@@ -232,7 +248,9 @@ export const videoData = [
 export const webData = [
   {
     id: "fixifoot",
-    cover: PicFixifootCover,
+    type: "web",
+    videoCover: 'videos/fixifoot_video.webm',
+    cover: PicFixifootBigCover,
     title: "fixifoot.com",
     subtitle: "Карбоновые стельки на заказ",
     description: "Возглавлял работу команды из трех человек. Использовал TypeScript, Next.js и Tailwind для разработки адаптивного дизайна веб и мобильной версии. Интегрировал панель управления контентом Shopify API. Провел SEO-оптимизацию для улучшения видимости в поисковых системах. Настроил взаимодействие с внешними сервисами, такими как Google Maps API и Nodemailer, с применением Node.js.",
@@ -247,7 +265,9 @@ export const webData = [
   },
   {
     id: "bamboostory",
-    cover: PicBambooCover,
+    type: "web",
+    videoCover: 'videos/bamboo_video.webm',
+    cover: PicBambooBigCover,
     title: "bamboostory.com",
     subtitle: "Фотографии на деревянных сувенирах",
     description:
@@ -263,7 +283,9 @@ export const webData = [
   },
   {
     id: "drusba",
-    cover: PicDrusbaCover,
+    type: "web",
+    videoCover: 'videos/drusba_video.webm',
+    cover: PicDrusbaBigCover,
     title: "drusba.art",
     subtitle: "Служба доставки абсурда",
     description: "Реализовал навигацию между страницами без перезагрузки с использованием Next.js. Разработал адаптивный веб-сайт для мобильных устройств. Интегрировал панель управления контентом сайта Shopify API. Провел SEO-оптимизацию для повышения видимости в поисковых системах и настроил взаимодействие с внешним сервисом Nodemailer с использованием Node.js.",
@@ -278,7 +300,9 @@ export const webData = [
   },
   {
     id: "drapeko",
-    cover: PicDrakepoCover,
+    type: "web",
+    videoCover: 'videos/drapeko_video.webm',
+    cover: PicDrakepoBigCover,
     title: "olgadrapeko.ru",
     subtitle: "Юрист для бизнеса и частных лиц",
     description: "Реализовал навигацию между страницами без перезагрузки с использованием Next.js. Разработал адаптивный веб-сайт для мобильных устройств. Разработал фронтенд и бэкенд, используя Next.js, TypeScript и Tailwind, обеспечил адаптивность сайта для мобильных устройств. Настроил взаимодействие с внешним сервисом Resend, применяя Node.js. Провел SEO-оптимизацию для улучшения видимости проекта в поисковых системах. ",
@@ -293,6 +317,8 @@ export const webData = [
   },
   {
     id: "vastolya",
+    type: "web",
+    videoCover: 'videos/drusba_video.webm',
     cover: PicVastolyaCover,
     title: "vastolya.art",
     subtitle: "Вы сейчас тут",

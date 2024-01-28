@@ -10,6 +10,10 @@ import Link from "next/link";
 
 const WebId = ({ params }: any) => {
   const data = webData.filter((item: { id: any }) => item.id == params.id);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   return (
     <div className="min-h-[91vh]">
@@ -37,9 +41,10 @@ const WebId = ({ params }: any) => {
               key={index}
               className="col-start-4 group col-span-3 transition-transform transform duration-200 shadow-lg rounded-lg overflow-hidden "
             >
-              <div className=" col-span-2 h-[33vh] bg-black relative  overflow-hidden cursor-pointer ease-in-out">
+              <div className={`col-span-2 h-[33vh]  ${ imageLoaded ? "bg-black" : "bg-none"} relative  overflow-hidden cursor-pointer ease-in-out`}>
                 <div className="">
                   <Image
+                    onLoad={handleImageLoad}
                     src={web.cover}
                     alt={``}
                     fill
