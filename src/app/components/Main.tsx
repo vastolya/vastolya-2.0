@@ -7,7 +7,7 @@ import Image from "next/image";
 import TestPic from "../../../public/pics/aiCover.jpg";
 
 const Main = () => {
-  const [shuffledData, setShuffledData] = useState<any[]>([]); // Явно указываем тип
+  const [shuffledData, setShuffledData] = useState<any[]>([]);
   useEffect(() => {
     const shuffleArray = (array: any) => {
       const shuffledArray = [...array];
@@ -26,7 +26,10 @@ const Main = () => {
     setShuffledData(shuffledResult);
   }, []); // Передавайте пустой массив зависимостей, чтобы эффект выполнялся только при монтировании компонента
   const [hoverStates, setHoverStates] = useState(Array(4).fill(false)); // Создаем массив состояний hover для каждого блока
-
+  const [imageLoaded, setImageLoaded] = useState(false); // Обработчик события загрузки изображения
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
   return (
     <main className="mx-[12.5vw] min-h-[91vh] ">
       <div className="h-[9.32vh] "></div>
@@ -55,7 +58,9 @@ const Main = () => {
               <Image
                 src={item.cover}
                 alt=""
-                width={1000}
+                priority
+                width={720}
+                onLoad={handleImageLoad}
                 className={`absolute object-cover h-full  scale-[100%] ${
                   hoverStates[index] ? "opacity-0" : "opacity-100"
                 } transition-all duration-400`}
@@ -67,7 +72,7 @@ const Main = () => {
                 muted
                 className={`scale-[101%] h-full w-full object-cover ${
                   hoverStates[index] ? "opacity-100" : "opacity-0"
-                } transition-all duration-200`}
+                } transition-all duration-200 ${imageLoaded ? "visible" : "hidden"}`}
               />
             </Link>
             {/* {hoverStates[index] ? (
