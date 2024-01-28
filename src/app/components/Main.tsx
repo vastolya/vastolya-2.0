@@ -33,6 +33,7 @@ const Main = () => {
       <div className="grid grid-cols-6 gap-x-0 rounded-lg overflow-hidden">
         {shuffledData.slice(0, 4).map((item, index) => (
           <div
+            key={index}
             className="col-span-3 h-[40.83vh]   overflow-hidden cursor-pointer shadow-lg"
             onMouseEnter={() =>
               setHoverStates((prev) => [
