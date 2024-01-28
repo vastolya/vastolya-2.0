@@ -37,7 +37,7 @@ const Main = () => {
         {shuffledData.slice(0, 4).map((item, index) => (
           <div
             key={index}
-            className="col-span-3 h-[40.83vh]   overflow-hidden cursor-pointer shadow-lg"
+            className="col-span-3 h-[40.83vh]   overflow-hidden cursor-pointer"
             onMouseEnter={() =>
               setHoverStates((prev) => [
                 ...prev.slice(0, index),
@@ -58,15 +58,16 @@ const Main = () => {
               <Image
                 src={item.cover}
                 alt=""
-                priority
                 width={720}
                 onLoad={handleImageLoad}
-                className={`absolute object-cover h-full  scale-[100%] ${
+                loading="lazy"
+                className={`absolute object-cover h-full w-full scale-[100%] ${
                   hoverStates[index] ? "opacity-0" : "opacity-100"
                 } transition-all duration-400`}
               />
               <video
                 src={item.videoCover}
+                preload="none" // Ленивая загрузка видео
                 autoPlay
                 loop
                 muted
