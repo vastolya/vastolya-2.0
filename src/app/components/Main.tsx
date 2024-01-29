@@ -60,7 +60,7 @@ const Main = () => {
                 alt=""
                 width={720}
                 onLoad={handleImageLoad}
-               priority
+                priority
                 className={`absolute object-cover h-full w-full scale-[100%] ${
                   hoverStates[index] ? "opacity-0" : "opacity-100"
                 } transition-all duration-400`}
@@ -71,9 +71,11 @@ const Main = () => {
                 autoPlay
                 loop
                 muted
-                className={`scale-[101%] h-full w-full object-cover ${
+                className={`scale-[101%] h-full w-full object-cover object-top ${
                   hoverStates[index] ? "opacity-100" : "opacity-0"
-                } transition-all duration-200 ${imageLoaded ? "visible" : "hidden"}`}
+                } transition-all duration-200 ${
+                  imageLoaded ? "visible" : "hidden"
+                }`}
               />
             </Link>
           </div>

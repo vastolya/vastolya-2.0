@@ -45,7 +45,7 @@ const Web = () => {
                   <p className="text-[2.22vh] leading-[2.22vh] pb-[0.74vh]">
                     {item.title.toUpperCase()}
                   </p>
-                  <p className=" text-[1.66vh] leading-[1.85vh]">
+                  <p className={`text-[1.48vh] leading-[2.22vh] font-medium ${montserrat.className}`}>
                     {item.subtitle}
                   </p>
                 </div>

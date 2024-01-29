@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { videoData } from "../../api/db";
 import Link from "next/link";
 import Image from "next/image";
+import { montserrat } from "@/app/font";
 
 const video = videoData;
 
@@ -16,7 +17,7 @@ const Video = () => {
   
   return (
     <main className="min-h-[91vh]">
-      <div className="h-[9.62vh] "></div>
+         <div className="h-[9.62vh] "></div>
       <div className="mx-[12.5vw] grid grid-cols-6 gap-x-[1.04vw] gap-y-[1.85vh] ">
         <h1 className="col-span-6 text-[5.18vh] leading-[5.55vh] py-[1.85vh]">
           ВИДЕО ПРОЕКТЫ
@@ -42,7 +43,7 @@ const Video = () => {
                   <p className="text-[2.22vh] leading-[2.22vh] pb-[0.74vh]">
                     {item.title.toUpperCase()}
                   </p>
-                  <p className=" text-[1.66vh] leading-[1.85vh]">
+                  <p className={`text-[1.48vh] leading-[2.22vh] font-medium ${montserrat.className}`}>
                     {item.subtitle}
                   </p>
                 </div>

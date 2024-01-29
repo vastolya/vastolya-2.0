@@ -53,7 +53,7 @@ const VideoId = ({ params }: any) => {
               {item.title.toUpperCase()}
             </h1>
             <p
-              className={` text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
+              className={` text-[1.48vh] leading-[2.22vh] font-medium ${montserrat.className}`}
             >
               {item.description}
             </p>
@@ -75,9 +75,9 @@ const VideoId = ({ params }: any) => {
                 <div className="">
                   <Image
                     onLoad={handleImageLoad}
+                    priority
                     src={video.cover}
                     alt={``}
-                    priority
                     fill
                     sizes="100"
                     className="object-cover  opacity-100 group-hover:opacity-20 transition-all duration-300 group-hover:scale-[103%] ease-in-out"
@@ -89,7 +89,7 @@ const VideoId = ({ params }: any) => {
                       {video.title.toUpperCase()}
                     </h1>
                     <p
-                      className={`text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
+                      className={`text-[1.48vh] leading-[2.22vh] font-medium ${montserrat.className}`}
                     >
                       {video.description}
                     </p>

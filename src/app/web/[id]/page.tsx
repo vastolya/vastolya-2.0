@@ -28,7 +28,7 @@ const WebId = ({ params }: any) => {
               {item.title.toUpperCase()}
             </h1>
             <p
-              className={` text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
+              className={` text-[1.48vh] leading-[2.2vh] font-medium ${montserrat.className}`}
             >
               {item.description}
             </p>
@@ -45,6 +45,7 @@ const WebId = ({ params }: any) => {
                 <div className="">
                   <Image
                     onLoad={handleImageLoad}
+                    priority
                     src={web.cover}
                     alt={``}
                     fill
@@ -58,7 +59,7 @@ const WebId = ({ params }: any) => {
                       {web.title.toUpperCase()}
                     </h1>
                     <p
-                      className={`text-[1.66vh] leading-[2.5vh] ${montserrat.className}`}
+                      className={`text-[1.48vh] leading-[2.22vh] font-medium ${montserrat.className}`}
                     >
                       {web.description}
                     </p>

@@ -318,7 +318,7 @@ export const webData = [
   {
     id: "vastolya",
     type: "web",
-    videoCover: 'videos/drusba_video.webm',
+    videoCover: 'videos/vastolya_video.webm',
     cover: PicVastolyaCover,
     title: "vastolya.art",
     subtitle: "Вы сейчас тут",

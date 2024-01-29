@@ -12,7 +12,6 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
-
       setScrolling(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       prevScrollPos = currentScrollPos; // Обновляем prevScrollPos
     };
@@ -49,16 +48,19 @@ const Header = () => {
         </Link>
 
         <div className="flex gap-[2.08vw] ">
-          <p>RU - EN</p>
+          {/* <p>RU - EN</p> */}
           <Link href="/web">
             <p>ВЕБ ПРОЕКТЫ</p>
           </Link>
           <Link href="/video">
             <p>ВИДЕО ПРОЕКТЫ</p>
           </Link>
-          <p>ОБО МНЕ</p>
+          <Link href="/about">
+            <p>ОБО МНЕ</p>
+          </Link>
         </div>
       </div>
+      
     </header>
   );
 };
