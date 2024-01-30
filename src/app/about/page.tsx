@@ -129,7 +129,7 @@ const About = () => {
                 <p className="font-semibold">{item.title}</p>
                 <p>{item.subtitle}</p>
 
-                <p className="text-gray-500">{item.location}</p>
+                <p className="text-gray-500 text-[1.31vh]">{item.location}</p>
               </div>
             ))}
           </div>
@@ -145,7 +145,7 @@ const About = () => {
                 >
                   {item.title}
                 </Link>
-                <p className="text-gray-500">{item.subtitle}</p>
+                <p className="text-gray-500  text-[1.31vh]">{item.subtitle}</p>
               </div>
             ))}
           </div>
@@ -167,8 +167,8 @@ const About = () => {
                 </Link>
                 <p>{item.subtitle}</p>
                 {item.stack ? (
-                  <p>
-                    <span className="font-medium text-gray-500">Стэк: </span>
+                  <p className="text-[1.31vh] text-gray-500">
+                    <span className="font-medium ">Стэк: </span>
                     {item.stack}
                   </p>
                 ) : (

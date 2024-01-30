@@ -31,8 +31,8 @@ const Main = () => {
     setImageLoaded(true);
   };
   return (
-    <main className="mx-[12.5vw] min-h-[91vh] ">
-      <div className="h-[9.32vh] "></div>
+    <main className="mx-5 md:mx-[12.5vw] md:min-h-[91vh] ">
+      <div className="md:h-[9.32vh] h-[68px] "></div>
       <div className="grid grid-cols-6 gap-x-0 rounded-lg overflow-hidden">
         {shuffledData.slice(0, 4).map((item, index) => (
           <div
