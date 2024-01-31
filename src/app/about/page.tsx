@@ -86,13 +86,13 @@ const exhibition = [
 
 const About = () => {
   return (
-    <main className="min-h-[91vh]">
-      <div className="h-[9.62vh] "></div>
-      <h1 className="mx-[12.5vw] text-[5.18vh] leading-[5.55vh] py-[1.85vh]">
+    <main className="md:min-h-[91vh]">
+      <div className="h-[68px] md:h-[9.62vh] "></div>
+      <h1 className="mx-5 py-2 text-2xl md:mx-[12.5vw]  md:text-[5.18vh] md:leading-[5.55vh] md:py-[1.85vh]">
         ОБО МНЕ
       </h1>
-      <div className="mx-[12.5vw] grid grid-cols-6 gap-x-[1.04vw] gap-y-[3.7vh]">
-        <div className="col-span-2 h-[18.70vh] bg-gray-200 rounded-lg relative overflow-hidden mr-[2vw]">
+      <div className="mx-5 grid gap-y-5 md:mx-[12.5vw] md:grid-cols-6 md:gap-x-[1.04vw] md:gap-y-[3.7vh]">
+        <div className="md:col-span-2 h-[256px] first-letter:md:h-[18.70vh] bg-gray-200 rounded-lg relative overflow-hidden md:mr-[2vw]">
           <Image src={PicAbout} alt="" fill className=" object-cover" />
           {/* <div className="absolute bottom-[1.85vh] right-[1.04vw] flex gap-[0.52vw]">
             {social.map((item, index) => (
@@ -102,78 +102,110 @@ const About = () => {
             ))}
           </div> */}
         </div>
-        <div className="col-span-4 flex flex-col gap-[1.85vh] font-medium">
-          <h2 className="text-[2.22vh] leading-[2.22vh]">АНАТОЛИЙ ВАСИЛЬЕВ</h2>
+        <div className="flex flex-col gap-3 md:col-span-4  md:gap-[1.85vh] md:font-medium">
+          <h2 className="text-2xl md:text-[2.22vh] md:leading-[2.22vh]">АНАТОЛИЙ ВАСИЛЬЕВ</h2>
           <p
-            className={`text-[1.48vh] leading-[2.2vh] ${montserrat.className}`}
+            className={` text-base md:text-[1.48vh] md:leading-[2.2vh] ${montserrat.className}`}
           >
             Я профессионал с более чем 2-мя годами коммерческого опыта во
-            фронтенд-разработке. <br /> В данный момент удаленно управляю двумя
-            проектами. <br /> Кроме того, я режиссер-монтажа с 8-ю годами опыта,
+            фронтенд-разработке. <br className="hidden md:block"/> В данный момент удаленно управляю двумя
+            проектами. <br className="hidden md:block"/> Кроме того, я режиссер-монтажа с 8-ю годами опыта,
             создавал документальные фильмы, <br />
             имиджевые видео и рекламу для социальных сетей и телевидения.
           </p>
           <p
-            className={`text-[1.48vh] leading-[2.2vh] ${montserrat.className}`}
+            className={`md:text-[1.48vh] md:leading-[2.2vh] ${montserrat.className}`}
           >
             Владею английским языком, могу вести деловую переписку и переговоры.
           </p>
         </div>
-        <div className="col-span-2 flex flex-col gap-[1.85vh] pb-[1.85vh]">
-          <h2 className="text-[2.22vh] leading-[2.22vh] ">ОБРАЗОВАНИЕ</h2>
+        <div className="hidden md:flex md:col-span-2 flex-col md:gap-[1.85vh] md:pb-[1.85vh]">
+          <h2 className="md:text-[2.22vh] md:leading-[2.22vh] ">ОБРАЗОВАНИЕ</h2>
           <div
-            className={`pb-[1.85vh] flex flex-col gap-[1.85vh] text-[1.48vh] leading-[2.2vh] font-medium ${montserrat.className}`}
+            className={`md:pb-[1.85vh] flex flex-col md:gap-[1.85vh] md:text-[1.48vh] md:leading-[2.2vh] font-medium ${montserrat.className}`}
           >
             {education.map((item, index) => (
-              <div key={index} className="flex flex-col gap-[0.74vh]">
+              <div key={index} className="flex flex-col md:gap-[0.74vh]">
                 <p className="font-semibold">{item.title}</p>
                 <p>{item.subtitle}</p>
 
-                <p className="text-gray-500 text-[1.31vh]">{item.location}</p>
+                <p className="text-gray-500 md:text-[1.31vh]">{item.location}</p>
               </div>
             ))}
           </div>
-          <h2 className="text-[2.22vh] leading-[2.22vh]">ВЫСТАВКИ</h2>
+          <h2 className="md:text-[2.22vh] md:leading-[2.22vh]">ВЫСТАВКИ</h2>
           <div
-            className={`flex flex-col gap-[1.85vh] text-[1.48vh] leading-[2.2vh] font-medium ${montserrat.className}`}
+            className={`flex flex-col md:gap-[1.85vh] md:text-[1.48vh] md:leading-[2.2vh] font-medium ${montserrat.className}`}
           >
             {exhibition.map((item, index) => (
-              <div key={index} className="flex flex-col gap-[0.74vh] ">
+              <div key={index} className="flex flex-col md:gap-[0.74vh] ">
                 <Link
                   href={item.link}
                   className="font-semibold hover:underline w-fit"
                 >
                   {item.title}
                 </Link>
-                <p className="text-gray-500  text-[1.31vh]">{item.subtitle}</p>
+                <p className="text-gray-500  md:text-[1.31vh]">{item.subtitle}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="col-span-4">
-          <h2 className="text-[2.22vh] leading-[2.22vh] pb-[1.85vh]">
+        <div className="md:col-span-4">
+          <h2 className="text-2xl pb-3 md:text-[2.22vh] md:leading-[2.22vh] md:pb-[1.85vh] ">
             ОПЫТ РАБОТЫ
           </h2>
           <div
-            className={`flex flex-col gap-[1.85vh] text-[1.48vh] leading-[2.2vh] font-medium ${montserrat.className}`}
+            className={`flex flex-col gap-5 text-base md:gap-[1.85vh] md:text-[1.48vh] md:leading-[2.2vh] md:font-medium ${montserrat.className}`}
           >
             {experience.map((item, index) => (
-              <div key={index} className="flex flex-col gap-[0.74vh]">
+              <div key={index} className="flex flex-col md:gap-[0.74vh] gap-3">
                 <Link
                   href={item.link}
-                  className="font-semibold hover:underline w-fit"
+                  className=" font-medium md:font-semibold hover:underline w-fit"
                 >
                   {item.title}
                 </Link>
                 <p>{item.subtitle}</p>
                 {item.stack ? (
-                  <p className="text-[1.31vh] text-gray-500">
+                  <p className="text-base md:text-[1.31vh] md:text-gray-500">
                     <span className="font-medium ">Стэк: </span>
                     {item.stack}
                   </p>
                 ) : (
                   <></>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex gap-5 md:hidden md:col-span-2 flex-col md:gap-[1.85vh] md:pb-[1.85vh]">
+       
+          <h2 className="text-2xl md:text-[2.22vh] md:leading-[2.22vh]">ВЫСТАВКИ</h2>
+          <div
+            className={`flex flex-col gap-3 md:gap-[1.85vh] md:text-[1.48vh] md:leading-[2.2vh] md:font-medium ${montserrat.className}`}
+          >
+            {exhibition.map((item, index) => (
+              <div key={index} className="flex flex-col gap-3 md:gap-[0.74vh] ">
+                <Link
+                  href={item.link}
+                  className="font-medium md:font-semibold hover:underline w-fit"
+                >
+                  {item.title}
+                </Link>
+                <p className="text-gray-500 text-base md:text-[1.31vh]">{item.subtitle}</p>
+              </div>
+            ))}
+          </div>
+          <h2 className="text-2xl md:text-[2.22vh] md:leading-[2.22vh] ">ОБРАЗОВАНИЕ</h2>
+          <div
+            className={`flex flex-col text-base gap-5 md:pb-[1.85vh]  md:gap-[1.85vh] md:text-[1.48vh] md:leading-[2.2vh] md:font-medium ${montserrat.className}`}
+          >
+            {education.map((item, index) => (
+              <div key={index} className="flex flex-col gap-3 md:gap-[0.74vh]">
+                <p className="font-medium md:font-semibold">{item.title}</p>
+                <p>{item.subtitle}</p>
+
+                <p className="text-gray-500 text-base md:text-[1.31vh]">{item.location}</p>
               </div>
             ))}
           </div>
