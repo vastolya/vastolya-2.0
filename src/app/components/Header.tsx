@@ -43,26 +43,26 @@ const Header = () => {
     >
       <div className="relative">
         <div
-          className={` z-[106] mx-5 md:mx-[12.5vw] py-5 md:py-[3.70vh] flex justify-between text-lg md:text-[1.85vh] md:leading-[2.22vh] `}
+          className={` z-[106] mx-5 md:mx-[12.5vw] py-5 md:py-[3.70vh] flex justify-between text-2xl md:text-[1.85vh] md:leading-[2.22vh] `}
         >
           <Link href="/" onClick={() => isClick && setisClick(!isClick)}>
             <h1>VASTOLYA.ART</h1>
           </Link>
           {isClick ? (
             <div
-              className=" animate-bounce"
+              className="flex justify-center"
               onClick={() => setisClick(!isClick)}
             >
-              x
+             <Image src={IconCross} alt='' width={24} />
             </div>
           ) : (
             <div
               onClick={() => setisClick(!isClick)}
-              className="flex md:hidden flex-col justify-center items-end gap-1"
+              className="flex md:hidden flex-col justify-center items-end gap-2"
             >
-              <div className="border-[1px] w-4 border-black rounded-lg"></div>{" "}
-              <div className="border-[1px] w-4 border-black rounded-lg"></div>{" "}
-              <div className="border-[1px] w-3 border-black rounded-lg"></div>
+              <div className="border-[1px] w-6 border-black rounded-lg"></div>{" "}
+              <div className="border-[1px] w-6 border-black rounded-lg"></div>{" "}
+              <div className="border-[1px] w-4 border-black rounded-lg"></div>
             </div>
           )}
           <div className="hidden md:flex gap-[2.08vw] ">
