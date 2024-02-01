@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import { webData, videoData } from "@/api/db";
 import Link from "next/link";
 import Image from "next/image";
-
-import TestPic from "../../../public/pics/aiCover.jpg";
+import { montserrat } from "../font";
 
 const Main = () => {
   const [shuffledData, setShuffledData] = useState<any[]>([]);
@@ -32,8 +31,8 @@ const Main = () => {
   };
   return (
     <main className="mx-5 md:mx-[12.5vw] md:min-h-[91vh] ">
-      <div className="md:h-[9.32vh] h-[68px] "></div>
-      <div className="grid grid-cols-6 gap-x-0 rounded-lg overflow-hidden">
+      <div className="md:h-[9.32vh] h-[74px] "></div>
+      <div className="hidden md:grid grid-cols-6 gap-x-0 rounded-lg overflow-hidden">
         {shuffledData.slice(0, 4).map((item, index) => (
           <div
             key={index}
@@ -79,6 +78,21 @@ const Main = () => {
               />
             </Link>
           </div>
+        ))}
+      </div>
+      <div className="md:hidden flex flex-col gap-5">
+        {shuffledData.slice(0, 4).map((item, index) => (
+          <Link href={`/${item.type}/${item.id}`} className=" ">
+            <div className="relative h-[256px] bg-slate-500 rounded-lg overflow-hidden shadow-lg" key={item.index}>
+             
+              <Image src={item.cover} alt='' width={700} className="absolute h-full object-cover  inset-0"/>
+              <div className="absolute h-[256px] w-full bg-gradient-to-t from-black via-transparent to-transparent "></div>
+              <div className="absolute bottom-5 right-5 text-white text-end">
+                <h1 className="text-2xl">{item.title.toUpperCase()}</h1>
+                <p className={`text-sm ${montserrat.className}`}>{item.subtitle}</p>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </main>

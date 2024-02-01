@@ -46,14 +46,14 @@ const VideoId = ({ params }: any) => {
       {data.map((item, index) => (
         <div
           key={index}
-          className="mx-5 md:mx-[12.5vw] md:my-[2.22vh] grid md:grid-cols-6 md:gap-x-[1.04vw] md:gap-y-[1.85vh] "
+          className="mx-5 md:mx-[12.5vw] md:my-[2.22vh] grid md:grid-cols-6 gap-y-5 md:gap-x-[1.04vw] md:gap-y-[1.85vh] "
         >
           <div className="md:col-span-2">
             <h1 className="text-2xl pb-5 md:pb-[1.85vh] md:text-[5.18vh] md:leading-[5.18vh]">
               {item.title.toUpperCase()}
             </h1>
             <p
-              className={`text-base pb-5 md:pb-0 md:text-[1.48vh] md:leading-[2.22vh] md:font-medium ${montserrat.className}`}
+              className={`text-base md:text-[1.48vh] md:leading-[2.22vh] md:font-medium ${montserrat.className}`}
             >
               {item.description}
             </p>
@@ -63,14 +63,14 @@ const VideoId = ({ params }: any) => {
           {item.content.map((video, index: number) => (
             <div
               key={index}
-              className="md:col-span-2 transition-transform transform duration-200"
+              className="md:col-span-2 transition-transform transform duration-200 border-[1.5px] px-5 py-5 md:border-none md:px-0 md:py-0 flex flex-col rounded-lg bg-white"
             >
               <div
                 onClick={(e) => {
                   handleVideoClick(video.youtubeId);
                   setIsModal(!isModal);
                 }}
-                className={`group md:col-span-2 h-full md:min-h-[33vh] pb-5 mdL:pb-0 ${
+                className={`group md:col-span-2 h-full md:min-h-[33vh]  ${
                   imageLoaded ? "md:bg-black" : "bg-none"
                 } md:relative rounded-lg overflow-hidden cursor-pointer`}
               >
@@ -93,7 +93,7 @@ const VideoId = ({ params }: any) => {
                     alt={``}
                     width={720}
                     sizes="100"
-                    className="object-cover  opacity-100 group-hover:opacity-20 transition-all duration-300 group-hover:scale-[103%] ease-in-out"
+                    className="object-cover  opacity-100"
                   />
                 </div>
 

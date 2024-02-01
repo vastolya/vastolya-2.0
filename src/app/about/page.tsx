@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import PicAbout from "../../../public/pics/about.jpg";
 import IconTelegram from "../../../public/icons/icon_telegram.svg";
-import IconGithub from "../../../public/icons/icon_github.svg";
 import IconLinkedin from "../../../public/icons/icon_linkedin.svg";
 
 import { montserrat } from "@/app/font";
@@ -10,7 +9,6 @@ import Link from "next/link";
 
 const social = [
   { src: IconTelegram, link: "https://t.me/vastolya" },
-  { src: IconGithub, link: "https://github.com/vastolya" },
   { src: IconLinkedin, link: "https://www.linkedin.com/in/vastolya/" },
 ];
 

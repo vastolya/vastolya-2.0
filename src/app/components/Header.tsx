@@ -3,6 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import IconCross from "../../../public/icons/icon_cross.svg";
+import IconTelegram from "../../../public/icons/icon_telegram.svg";
+import IconLinkedin from "../../../public/icons/icon_linkedin.svg";
+
+const social = [
+  { src: IconTelegram, link: "https://t.me/vastolya" },
+  { src: IconLinkedin, link: "https://www.linkedin.com/in/vastolya/" },
+];
 
 const headerMenu = [
   { title: "ВЕБ ПРОЕКТЫ", link: "/web" },
@@ -53,7 +60,7 @@ const Header = () => {
               className="flex justify-center"
               onClick={() => setisClick(!isClick)}
             >
-             <Image src={IconCross} alt='' width={24} />
+              <Image src={IconCross} alt="" width={24} />
             </div>
           ) : (
             <div
@@ -97,6 +104,18 @@ const Header = () => {
                   </Link>
                 </div>
               ))}
+              <div className="flex mx-5 gap-2 justify-end">
+                {social.map((item, index) => (
+                  <Link href={item.link} target="_blank" className="relative h-10 w-10">
+                    <Image
+                      src={item.src}
+                      alt=""
+                      fill
+                      className=" object-cover"
+                    />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>
