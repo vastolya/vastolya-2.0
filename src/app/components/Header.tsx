@@ -106,7 +106,7 @@ const Header = () => {
               ))}
               <div className="flex mx-5 gap-2 justify-end">
                 {social.map((item, index) => (
-                  <Link href={item.link} target="_blank" className="relative h-10 w-10">
+                  <Link href={item.link} target="_blank" className="relative h-10 w-10" key={index}>
                     <Image
                       src={item.src}
                       alt=""

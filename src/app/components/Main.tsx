@@ -82,8 +82,8 @@ const Main = () => {
       </div>
       <div className="md:hidden flex flex-col gap-5">
         {shuffledData.slice(0, 4).map((item, index) => (
-          <Link href={`/${item.type}/${item.id}`} className=" ">
-            <div className="relative h-[256px] bg-slate-500 rounded-lg overflow-hidden shadow-lg" key={item.index}>
+          <Link href={`/${item.type}/${item.id}`} key={index}>
+            <div className="relative h-[256px] bg-slate-500 rounded-lg overflow-hidden shadow-lg" >
              
               <Image src={item.cover} alt='' width={700} className="absolute h-full object-cover  inset-0"/>
               <div className="absolute h-[256px] w-full bg-gradient-to-t from-black via-transparent to-transparent "></div>
