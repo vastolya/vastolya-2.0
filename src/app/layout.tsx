@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-gray-100  ${RG_Spacious.className} `}>
+      <body className={`bg-gray-100 scrollbar-hide ${RG_Spacious.className} `}>
         <Header />
         {children}
         <Footer />
