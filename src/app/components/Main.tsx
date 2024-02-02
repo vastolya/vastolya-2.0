@@ -36,7 +36,7 @@ const Main = () => {
         {shuffledData.slice(0, 4).map((item, index) => (
           <div
             key={index}
-            className="col-span-3 h-full overflow-hidden cursor-pointer"
+            className="col-span-3 h-[41.29vh] overflow-hidden cursor-pointer"
             onMouseEnter={() =>
               setHoverStates((prev) => [
                 ...prev.slice(0, index),
@@ -73,13 +73,14 @@ const Main = () => {
                 loop={true}
                 controls={false}
                 preload="auto"
-                src={item.videoCover}
                 className={`scale-[101%] h-full] w-full object-cover object-top ${
                   hoverStates[index] ? "opacity-100" : "opacity-0"
                 } transition-all duration-200 ${
                   imageLoaded ? "visible" : "hidden"
                 }`}
-              />
+              >
+                <source src={item.videoCover} />
+              </video>
             </Link>
           </div>
         ))}
