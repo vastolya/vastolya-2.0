@@ -36,7 +36,7 @@ const Main = () => {
         {shuffledData.slice(0, 4).map((item, index) => (
           <div
             key={index}
-            className="col-span-3 h-[40.83vh]   overflow-hidden cursor-pointer"
+            className="col-span-3 h-[40.83vh] overflow-hidden cursor-pointer"
             onMouseEnter={() =>
               setHoverStates((prev) => [
                 ...prev.slice(0, index),
@@ -70,6 +70,7 @@ const Main = () => {
                 autoPlay
                 loop
                 muted
+                playsInline 
                 className={`scale-[101%] h-full w-full object-cover object-top ${
                   hoverStates[index] ? "opacity-100" : "opacity-0"
                 } transition-all duration-200 ${
