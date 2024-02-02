@@ -57,21 +57,22 @@ const Main = () => {
               className="relative h-[41.29vh]"
             >
               <Image
-                src={item.cover}
-                alt=""
                 width={720}
                 onLoad={handleImageLoad}
                 priority
-                className={`absolute object-cover h-full w-full scale-[100%] ${
+                src={item.cover}
+                alt=""
+                className={`absolute object-cover h-[41.29vh] w-full scale-[100%] ${
                   hoverStates[index] ? "opacity-0" : "opacity-100"
                 } transition-all duration-400`}
               />
               <video
-                preload="none" // Ленивая загрузка видео
-                autoPlay
-                loop
+                playsInline={true}
                 muted={true}
-                playsInline
+                autoPlay={true}
+                loop={true}
+                controls={false}
+                preload="auto"
                 src={item.videoCover}
                 className={`scale-[101%] h-full] w-full object-cover object-top ${
                   hoverStates[index] ? "opacity-100" : "opacity-0"
