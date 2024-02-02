@@ -70,7 +70,7 @@ const Main = () => {
                 preload="none" // Ленивая загрузка видео
                 autoPlay
                 loop
-                muted
+                muted={true}
                 playsInline
                 src={item.videoCover}
                 className={`scale-[101%] h-full] w-full object-cover object-top ${
