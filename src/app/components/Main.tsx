@@ -30,7 +30,7 @@ const Main = () => {
     setImageLoaded(true);
   };
   return (
-    <main className="mx-5 md:mx-[12.5vw] md:min-h-[91vh] ">
+    <main className="mx-5 md:mx-[12.5vw] md:min-h-[91vh]  ">
       <div className="md:h-[9.32vh] h-[74px] "></div>
       <div className="hidden md:grid grid-cols-6 gap-x-0 rounded-lg overflow-hidden">
         {shuffledData.slice(0, 4).map((item, index) => (
@@ -52,7 +52,7 @@ const Main = () => {
               ])
             }
           >
-            <Link href={`/${item.type}/${item.id}`} className="relative h-full">
+            <Link href={`/${item.type}/${item.id}`} className="relative h-[41.29vh]">
               {" "}
               <Image
                 src={item.cover}
@@ -60,7 +60,7 @@ const Main = () => {
                 width={720}
                 onLoad={handleImageLoad}
                 priority
-                className={`absolute object-cover h-full w-full scale-[100%] ${
+                className={`absolute object-cover h-[40.83vh] w-full scale-[100%] ${
                   hoverStates[index] ? "opacity-0" : "opacity-100"
                 } transition-all duration-400`}
               />
@@ -70,8 +70,7 @@ const Main = () => {
                 autoPlay
                 loop
                 muted
-                playsInline 
-                className={`scale-[101%] h-full w-full object-cover object-top ${
+                className={`scale-[101%] h-[40.83vh] w-full object-cover object-top ${
                   hoverStates[index] ? "opacity-100" : "opacity-0"
                 } transition-all duration-200 ${
                   imageLoaded ? "visible" : "hidden"
