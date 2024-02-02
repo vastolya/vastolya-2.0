@@ -96,17 +96,25 @@ const Header = () => {
               isClick ? "translate-y-0" : "-translate-y-[300px]"
             }`}
           >
-            <div className={` bg-white w-screen pb-5`}>
+            <div className={` bg-white w-screen pb-5 flex flex-col`}>
               {headerMenu.map((item, index) => (
-                <div className="py-2 px-5" key={index}>
-                  <Link href={item.link} onClick={() => setisClick(!isClick)}>
-                    {item.title}
-                  </Link>
-                </div>
+                <Link
+                  href={item.link}
+                  onClick={() => setisClick(!isClick)}
+                  className="w-full py-2 px-5"
+                  key={index}
+                >
+                  {item.title}
+                </Link>
               ))}
               <div className="flex mx-5 gap-2 justify-end">
                 {social.map((item, index) => (
-                  <Link href={item.link} target="_blank" className="relative h-10 w-10" key={index}>
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    className="relative h-10 w-10"
+                    key={index}
+                  >
                     <Image
                       src={item.src}
                       alt=""

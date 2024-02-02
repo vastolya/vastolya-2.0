@@ -1,9 +1,9 @@
 const ModalVideo = ({ video, onClose }: any) => {
 
   return (
-    <div className="fixed z-[102] ">
+    <div className="fixed z-[110] ">
       <div className="">
-        <div className="fixed z-[103] flex my-[25vh] h-[400px] w-full md:mx-[29%] md:my-[10%] md:h-[720px]  md:w-[1080px] rounded-lg overflow-hidden">
+        <div className="fixed z-[103] flex my-[25vh] h-[400px] w-full md:mx-[25vw] md:my-[25vh] md:h-[50vh] md:w-[50vw] rounded-lg overflow-hidden">
         <iframe
             className="w-full h-full"
             src={`https://www.youtube.com/embed/${video}?rel=0`}
@@ -14,7 +14,7 @@ const ModalVideo = ({ video, onClose }: any) => {
         </div>
         <div
           onClick={onClose}
-          className="fixed z-[101] bg-black w-screen h-screen opacity-75 box-content"
+          className="fixed z-[101] bg-black w-screen h-screen opacity-85 box-content"
         ></div>
       </div>
     </div>
