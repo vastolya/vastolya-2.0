@@ -25,10 +25,10 @@ const Main = () => {
     setShuffledData(shuffledResult);
   }, []); // Передавайте пустой массив зависимостей, чтобы эффект выполнялся только при монтировании компонента
   const [hoverStates, setHoverStates] = useState(Array(4).fill(false)); // Создаем массив состояний hover для каждого блока
-  const [imageLoaded, setImageLoaded] = useState(false); // Обработчик события загрузки изображения
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
+  // const [imageLoaded, setImageLoaded] = useState(false); // Обработчик события загрузки изображения
+  // const handleImageLoad = () => {
+  //   setImageLoaded(true);
+  // };
   return (
     <main className="mx-5 md:mx-[12.5vw] md:min-h-[91vh]">
       <div className="md:h-[9.8vh] h-[74px] "></div>
@@ -58,7 +58,7 @@ const Main = () => {
             >
               <Image
                 fill
-                onLoad={handleImageLoad}
+                // onLoad={handleImageLoad}
                 priority
                 src={item.cover}
                 alt=""
