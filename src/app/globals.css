@@ -2,11 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.hideScrollBar::-webkit-scrollbar {
-    display: none; /* Скрыть полосу прокрутки для браузера Chrome, Safari и Opera */
-  }
-  
-  .hideScrollBar {
-    scrollbar-width: none; /* Скрыть полосу прокрутки для браузера Firefox */
-    overflow-y: scroll; /* Добавить вертикальную прокрутку */
-  }
