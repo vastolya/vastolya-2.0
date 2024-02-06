@@ -57,12 +57,12 @@ const Main = () => {
               className="relative h-[41.29vh]"
             >
               <Image
-                fill
-                // onLoad={handleImageLoad}
-                priority
                 src={item.cover}
                 alt=""
-                className={`object-cover ${
+                fill
+                // onLoad={handleImageLoad}
+                // priority
+                className={`object-cover h-full w-full ${
                   hoverStates[index] ? "opacity-0" : "opacity-100"
                 } transition-all duration-400`}
               />
