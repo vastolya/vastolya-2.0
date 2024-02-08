@@ -93,7 +93,7 @@ const VideoId = ({ params }: any) => {
                     alt={``}
                     width={720}
                     sizes="100"
-                    className="object-cover  opacity-100"
+                    className="object-cover object-top w-full"
                   />
                 </div>
 

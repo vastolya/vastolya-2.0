@@ -57,7 +57,7 @@ const WebId = ({ params }: any) => {
                     className="object-cover object-top opacity-100 group-hover:opacity-20  transition-all duration-300 scale-[101%] group-hover:scale-[103%] ease-in-out"
                   />
                 </div>
-                <div className="md:hidden rounded-lg overflow-hidden">
+                <div className="md:hidden block rounded-lg overflow-x-hidden mb-4">
                   <Image
                     onLoad={handleImageLoad}
                     priority
@@ -65,7 +65,7 @@ const WebId = ({ params }: any) => {
                     alt={``}
                     width={700}
                     sizes="100"
-                    className="object-cover object-top w-full mb-4"
+                    className="object-cover object-top w-full"
                   />
                 </div>
                 <div className="md:absolute md:text-white flex flex-col justify-start md:gap-y-[0.74vh] md:opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
