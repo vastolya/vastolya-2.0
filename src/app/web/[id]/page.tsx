@@ -39,10 +39,10 @@ const WebId = ({ params }: any) => {
               href={web.youtubeId}
               target="_blank"
               key={index}
-              className="md:col-start-4 group md:col-span-3 transition-transform transform duration-200 shadow-lg rounded-lg overflow-hidden border-[1.5px] px-5 py-5 md:border-none md:px-0 md:py-0 bg-white"
+              className="md:col-start-4 md:col-span-3 transition-transform transform duration-200 shadow-lg rounded-lg overflow-hidden border-[1.5px] px-5 py-5 md:border-none md:px-0 md:py-0 bg-white"
             >
               <div
-                className={`col-span-2 h-[33vh]  ${
+                className={`group md:col-span-2 h-full md:h-[33vh] ${
                   imageLoaded ? "md:bg-black" : "bg-none"
                 } relative  overflow-hidden cursor-pointer ease-in-out`}
               >
