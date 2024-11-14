@@ -14,18 +14,18 @@ const social = [
 
 const experience = [
   {
-    title: "Bamboo Story LTD (Бангкок)",
+    title: "Gaijin Entertainment",
     subtitle:
-      "Frontend/Fullstack-разработчик с сентября 2023. Создал адаптивный сайт, настроил взаимодействие с внешними сервисами,  провел SEO-оптимизацию.",
-    stack: "Next.js, TypeScript, Tailwind, Node.js, Resend, Firebase, Stripe",
-    link: "https://bamboo-story.vercel.app/",
+      "Работал над созданием внутренних сервисов для одного из крупнейших разработчиков игр в Европе, известного такими играми, как War Thunder",
+    stack: "TypeScript, React, ChakraUI, OpenAPI, TanStack Query, Gerrit",
+    link: "https://gaijin.net/en",
   },
   {
-    title: "Fixifoot (Бангкок)",
+    title: "LS Group Thailand",
     subtitle:
-      "Frontend/Fullstack-разработчик с ноября 2022 по август 2023. Руководил командой из трех человек, разработал адаптивный дизайн, интегрировал внешние сервисы, провел SEO-оптимизацию.",
+      "Выпустил два SPA-приложения на Next.js, TypeScript, Tailwind, для проектов в ритейле и онлайн-продажах",
     stack:
-      "Next.js, TypeScript, Tailwind, Shopify API, Node.js, Google Maps API, Nodemailer",
+      "TypeScript, Next.js, Tailwind, Node.js, Shopify API, Stripe, Google Maps API, Resend",
     link: "https://www.fixifoot.com/",
   },
   {
@@ -105,16 +105,13 @@ const About = () => {
           <p
             className={` text-base md:text-[1.48vh] md:leading-[2.2vh] ${montserrat.className}`}
           >
-            Я профессионал с более чем 2-мя годами коммерческого опыта во
-            фронтенд-разработке. <br className="hidden md:block"/> В данный момент удаленно управляю двумя
-            проектами. <br className="hidden md:block"/> Кроме того, я режиссер-монтажа с 8-ю годами опыта,
-            создавал документальные фильмы, <br />
-            имиджевые видео и рекламу для социальных сетей и телевидения.
+            Я  фронтенд-разработчик с 3-мя годами коммерческого опыта <br className="hidden md:block"/><br className="hidden md:block"/> А еще, режиссер-монтажа и моушен-дизайнер с 7-ю годами практики,
+            я создавал документальные фильмы и рекламу для социальных сетей и телевидения
           </p>
           <p
             className={`md:text-[1.48vh] md:leading-[2.2vh] ${montserrat.className}`}
           >
-            Владею английским языком, могу вести деловую переписку и переговоры.
+            Владею английским языком, могу вести деловую переписку и переговоры
           </p>
         </div>
         <div className="hidden md:flex md:col-span-2 flex-col md:gap-[1.85vh] md:pb-[1.85vh]">
@@ -186,6 +183,7 @@ const About = () => {
               <div key={index} className="flex flex-col gap-3 md:gap-[0.74vh] ">
                 <Link
                   href={item.link}
+                  replace
                   className="font-medium md:font-semibold hover:underline w-fit"
                 >
                   {item.title}
